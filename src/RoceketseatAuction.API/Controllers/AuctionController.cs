@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RoceketseatAuction.API.Controllers;
 using RocektseatAuction.API.UseCases.Auctions.GetCurrent;
 using RocketseatAuction.API.Entities;
 
 namespace RockeetseatAuction.API.Controllers;
 
-[Route("[controller]")]
-[ApiController]
-public class AuctionController : ControllerBase
+public class AuctionController : RocketseatAuctionBaseController
 {
     [HttpGet]
     [ProducesResponseType(typeof(Auction) ,StatusCodes.Status200OK)]
